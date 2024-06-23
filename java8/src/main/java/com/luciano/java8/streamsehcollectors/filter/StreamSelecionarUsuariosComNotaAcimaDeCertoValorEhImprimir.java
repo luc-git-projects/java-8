@@ -1,11 +1,10 @@
-package com.luciano.java8.streamsehcollectors;
+package com.luciano.java8.streamsehcollectors.filter;
 
 import com.luciano.java8.model.Usuario;
 import java.util.ArrayList;
-import static java.util.Comparator.comparing;
 import java.util.List;
 
-public class SelecionandosUsuariosComPontosAcimaDeDeterminadoValor {
+public class StreamSelecionarUsuariosComNotaAcimaDeCertoValorEhImprimir {
 
     public static void main(String[] args) {
         
@@ -27,12 +26,10 @@ public class SelecionandosUsuariosComPontosAcimaDeDeterminadoValor {
         usuarios.add(user6);
         usuarios.add(user7);
         usuarios.add(user8);
-
-        List<Usuario> notaAcimaValor = usuarios.stream()
-                .filter(u -> u.getPontos() > 185)
-                .toList();
         
-        notaAcimaValor.stream().forEach(System.out::println);
+        usuarios.stream()
+                .filter( u -> u.getPontos() > 140)
+                .forEach(System.out::println);
     }
 
 }
