@@ -2,8 +2,10 @@ package com.luciano.java8.model;
 
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 
+@ToString
 public class Usuario {
 
     @Getter
